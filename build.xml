@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="entropy-test">
+
+	<property name="project.src" location="src"/>
+	<property name="project.dist" location="dist"/>
+	<property name="project.build" location="build"/>
+	<property name="project.version" value="0.04"/>
+	<property name="project.jar" location="${project.dist}/ecivis-entropy-test-${project.version}.jar"/>
+	
+	<target name="clean">
+		<delete dir="${project.dist}"/>
+		<mkdir dir="${project.dist}"/>
+		<delete dir="${project.build}"/>
+		<mkdir dir="${project.build}"/>
+	</target>
+
+	<target name="compile" depends="clean">
+		<javac srcdir="${project.src}" destdir="${project.build}"/>
+	</target>
+	
+    <target name="jar" depends="compile">
+        <jar destfile="${project.jar}">
+            <manifest>
+                <attribute name="Main-Class" value="com.ecivis.test.EntropyTester"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${project.build}"/>
+        </jar>
+    </target>
+</project>
