@@ -22,6 +22,14 @@ The built file will appear in the dist directory.
         java -jar ecivis-entropy-test-X.YY.jar test SUN NativePRNG
         java -jar ecivis-entropy-test-X.YY.jar test 1000 SUN SHA1PRNG
 
+## Sample Output
+
+    $ java -jar dist/ecivis-entropy-test-0.04.jar test 10000 SUN NativePRNG
+    Instantiated SUN version 1.6 NativePRNG SecureRandom instance in 86 ms
+    Requesting 10000 samples, 16 bytes each. Each of the following dots represents 1 Kb
+    ...........
+    Received 160000 bytes of random data in 89 ms
+
 ## License
 
 Copyright 2012 eCivis, Inc.
