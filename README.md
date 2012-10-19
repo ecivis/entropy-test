@@ -12,15 +12,15 @@ The built file will appear in the dist directory.
 
 ## Usage
 
-Specify an action and provide required options:
-> list - Shows the available security providers and algorithms for SecureRandom implementations.
-> test - Run the entropy test. Optional arguments are sampleCount, provider, and algorithm
+    Specify an action and provide required options:
+        list - Shows the available security providers and algorithms for SecureRandom implementations.
+        test - Run the entropy test. Optional arguments are sampleCount, provider, and algorithm
 
-Examples:
-> java -jar ecivis-entropy-test-X.YY.jar list
-> java -jar ecivis-entropy-test-X.YY.jar test 25
-> java -jar ecivis-entropy-test-X.YY.jar test SUN NativePRNG
-> java -jar ecivis-entropy-test-X.YY.jar test 1000 SUN SHA1PRNG
+    Examples:
+        java -jar ecivis-entropy-test-X.YY.jar list
+        java -jar ecivis-entropy-test-X.YY.jar test 25
+        java -jar ecivis-entropy-test-X.YY.jar test SUN NativePRNG
+        java -jar ecivis-entropy-test-X.YY.jar test 1000 SUN SHA1PRNG
 
 ## License
 
